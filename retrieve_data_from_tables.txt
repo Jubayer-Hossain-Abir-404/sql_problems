@@ -1,0 +1,24 @@
+# Write a SQL statement that displays all the information about all salespeople.
+1. SELECT * FROM salesman;
+
+# Write a SQL statement to display a string "This is SQL Exercise, Practice and Solution"
+2. SELECT 'This is SQL Exercise, Practice and Solution';
+
+# Write a SQL query to display three numbers in three columns. 
+3. SELECT 1,2,3;
+
+# Write a SQL query to display the sum of two numbers 10 and 15 from the RDBMS server.
+4. SELECT 10+15;
+
+# Write a SQL statement to display specific columns such as names and commissions for all salespeople. 
+5. SELECT name, commission FROM salesman;
+
+# From the following table, write a SQL query to identify the unique salespeople ID. Return salesman_id. 
+6. SELECT DISTINCT salesman_id FROM orders;
+
+# From the following table, write a SQL query to locate salespeople who live in the city of 'Paris'. Return salesperson's name, city. 
+7. SELECT name, city FROM salesman WHERE city='Paris';
+
+# From the following table, write a SQL query to find the Nobel Prize winners in the field of ‘Physics’ since 1950. Return winner.
+8. SELECT WINNER FROM nobel_win WHERE SUBJECT = 'Physics' AND YEAR >= 1950;
+
