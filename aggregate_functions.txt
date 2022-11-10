@@ -3,3 +3,6 @@
 
 # From the following table, write a SQL query to calculate the average purchase amount of all orders. Return average purchase amount. 
 2. SELECT avg(purch_amt) FROM orders;
+
+# From the following table, write a SQL query that counts the number of unique salespeople. Return number of salespeople.
+3. SELECT count(DISTINCT salesman_id) FROM orders; 
