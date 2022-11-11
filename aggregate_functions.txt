@@ -6,3 +6,6 @@
 
 # From the following table, write a SQL query that counts the number of unique salespeople. Return number of salespeople.
 3. SELECT count(DISTINCT salesman_id) FROM orders; 
+
+# From the following table, write a SQL query to count the number of customers. Return number of customers.
+4. SELECT count(customer_id) FROM customer;
