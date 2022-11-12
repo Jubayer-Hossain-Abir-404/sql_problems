@@ -18,3 +18,28 @@
 
 # From the following table, write a SQL query to find the highest grade of the customers in each city. Return city, maximum grade.
 7. SELECT city, max(grade) FROM customer group  by city;
+
+# From the following table, write a SQL query to find the highest purchase amount ordered by each customer. Return customer ID, maximum purchase amount.
+9. SELECT customer_id, max(purch_amt) FROM orders group by customer_id;
+
+# From the following table, write a SQL query to find the highest purchase amount ordered by each customer on a particular date. Return, order date and highest purchase amount.
+10. SELECT customer_id, ord_date, max(purch_amt) FROM orders group by customer_id, ord_date;
+
+# From the following table, write a SQL query to determine the highest purchase amount made by each salesperson on '2012-08-17'. Return salesperson ID, purchase amount 
+11. SELECT salesman_id, max(purch_amt) FROM orders WHERE ord_date='2012-08-17' group by salesman_id;
+
+# From the following table, write a SQL query to find the highest order (purchase) amount by each customer on a particular order date. Filter the result by highest order (purchase) amount above 2000.00. Return customer id, order date and maximum purchase amount. 
+12. SELECT customer_id, ord_date, max(purch_amt) as max FROM orders WHERE purch_amt > 2000 group by customer_id, ord_date;
+
+# From the following table, write a SQL query to find the maximum order (purchase) amount in the range 2000 - 6000 (Begin and end values are included.) by combination of each customer and order date. Return customer id, order date and maximum purchase amount.
+13. SELECT customer_id, ord_date, max(purch_amt) as max FROM orders WHERE purch_amt >= 2000 and purch_amt<= 6000 group by customer_id, ord_date;
+
+# From the following table, write a SQL query to find the maximum order (purchase) amount based on the combination of each customer and order date. Filter the rows for maximum order (purchase) amount is either 2000, 3000, 5760, 6000. Return customer id, order date and maximum purchase amount.
+14. SELECT customer_id, ord_date, max(purch_amt) as max FROM orders WHERE purch_amt = 2000 or purch_amt = 3000 or purch_amt = 5760 or purch_amt = 6000 group by customer_id, ord_date;
+
+# From the following table, write a SQL query to find the maximum order (purchase) amount for each customer. The customer ID should be in the range 3002 and 3007(Begin and end values are included.). Filter the rows for maximum order (purchase) amount is higher than 1000. Return customer id and maximum purchase amount.
+16. SELECT customer_id, max(purch_amt) as max FROM orders WHERE customer_id >=3002 and customer_id <= 3007 and purch_amt > 1000 group by customer_id;
+
+# From the following table, write a SQL query to count all the orders generated on '2012-08-17'. Return number of orders.
+17. SELECT count(ord_no) FROM orders where ord_date= '2012-08-17';
+
