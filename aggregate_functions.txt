@@ -13,3 +13,8 @@
 # From the following table, write a SQL query to determine the number of customers who received at least one grade for their activity. 
 5. SELECT count(grade) FROM customer;
 
+# From the following table, write a SQL query to find the maximum purchase amount.
+6. SELECT max(purch_amt) FROM orders;
+
+# From the following table, write a SQL query to find the highest grade of the customers in each city. Return city, maximum grade.
+7. SELECT city, max(grade) FROM customer group  by city;
