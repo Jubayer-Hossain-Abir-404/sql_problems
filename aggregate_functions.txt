@@ -9,3 +9,7 @@
 
 # From the following table, write a SQL query to count the number of customers. Return number of customers.
 4. SELECT count(customer_id) FROM customer;
+
+# From the following table, write a SQL query to determine the number of customers who received at least one grade for their activity. 
+5. SELECT count(grade) FROM customer;
+
