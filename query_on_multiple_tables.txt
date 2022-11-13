@@ -4,3 +4,5 @@
 # From the following tables, write a SQL query to locate the orders made by customers. Return order number, customer name.
 4. SELECT ord_no, cust_name FROM orders, customer WHERE orders.customer_id = customer.customer_id;
 
+# From the following tables, write a SQL query to find those customers where each customer has a grade and is served by a salesperson who belongs to a city. Return cust_name as "Customer", grade as "Grade"
+5. SELECT cust_name as "Customer", grade as "Grade" FROM salesman, customer, orders WHERE customer.grade is NOT NULL and salesman.salesman_id = customer.salesman_id and customer.customer_id  = orders.customer_id;
