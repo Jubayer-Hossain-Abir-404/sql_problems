@@ -1,3 +1,6 @@
 # From the following tables, write a SQL query to find the salespeople and customers who live in the same city. Return customer name, salesperson name and salesperson city.
 1. SELECT cust_name, name, salesman.city FROM salesman, customer WHERE salesman.city = customer.city;
 
+# From the following tables, write a SQL query to locate the orders made by customers. Return order number, customer name.
+4. SELECT ord_no, cust_name FROM orders, customer WHERE orders.customer_id = customer.customer_id;
+
