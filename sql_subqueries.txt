@@ -9,3 +9,6 @@
 
 # From the following tables write a SQL query to count the number of customers with grades above the average in New York City. Return grade and count. 
 8. SELECT count(customer_id), grade FROM Customer where grade > (SELECT avg(grade) FROM Customer WHERE city = 'New York') group by grade;
+
+# From the following tables, write a SQL query to find those salespeople who earned the maximum commission. Return ord_no, purch_amt, ord_date, and salesman_id.
+9. SELECT ord_no, purch_amt, ord_date, salesman_id FROM Orders WHERE salesman_id = (SELECT salesman_id FROM salesman WHERE commission = (SELECT max(commission) FROM salesman));
