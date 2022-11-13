@@ -6,3 +6,6 @@
 
 # From the following tables, write a SQL query to find those customers where each customer has a grade and is served by a salesperson who belongs to a city. Return cust_name as "Customer", grade as "Grade"
 5. SELECT cust_name as "Customer", grade as "Grade" FROM salesman, customer, orders WHERE customer.grade is NOT NULL and salesman.salesman_id = customer.salesman_id and customer.customer_id  = orders.customer_id;
+
+# From the following table, write a SQL query to find those customers who are served by a salesperson and the salesperson earns commission in the range of 12% to 14% (Begin and end values are included.). Return cust_name AS "Customer", city AS "City".
+6. SELECT cust_name as Customer, salesman.city as City, salesman.name, salesman.commission FROM salesman, customer WHERE salesman.salesman_id = customer.salesman_id and salesman.commission >=0.12 and salesman.commission <= 0.14;
