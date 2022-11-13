@@ -6,3 +6,6 @@
 
 # Write a query to display all the customers whose ID is 2001 below the salesperson ID of Mc Lyon.
 7. SELECT * FROM customer WHERE customer_id = (SELECT salesman_id -2001 FROM salesman WHERE name = 'Mc Lyon');
+
+# From the following tables write a SQL query to count the number of customers with grades above the average in New York City. Return grade and count. 
+8. SELECT count(customer_id), grade FROM Customer where grade > (SELECT avg(grade) FROM Customer WHERE city = 'New York') group by grade;
