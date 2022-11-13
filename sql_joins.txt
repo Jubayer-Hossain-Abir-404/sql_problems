@@ -1,3 +1,6 @@
 
 # From the following tables write a SQL query to find the salesperson and customer who reside in the same city. Return Salesman, cust_name and city.
 1. SELECT salesman.name as Salesman, cust_name, salesman.city as city FROM salesman inner join customer on salesman.city = customer.city;
+
+# From the following tables write a SQL query to locate those salespeople who do not live in the same city where their customers live and have received a commission of more than 12% from the company. Return Customer Name, customer city, Salesman, salesman city, commission.
+5. SELECT cust_name as customer, customer.city as "customer city", salesman.name as Salesman, salesman.city as "salesman city", commission FROM customer inner join salesman on customer.city <> salesman.city and salesman.commission > 0.12 and salesman.salesman_id = customer.salesman_id;
