@@ -14,3 +14,5 @@ NATURAL JOIN salesman;
 # Write a SQL statement to make a report with customer name, city, order number, order date, and order amount in ascending order according to the order date to determine whether any of the existing customers have placed an order or not.
 10. SELECT cust_name as "customer name", city, ord_no as "order number", ord_date as "order date", purch_amt as "order amount" FROM orders left join customer on orders.customer_id = customer.customer_id order by ord_date;
 
+# Write a SQL statement to generate a list in ascending order of salespersons who work either for one or more customers or have not yet joined any of the customers.
+12. SELECT salesman.name FROM customer, salesman where customer.salesman_id = salesman.salesman_id;
