@@ -16,3 +16,6 @@ NATURAL JOIN salesman;
 
 # Write a SQL statement to generate a list in ascending order of salespersons who work either for one or more customers or have not yet joined any of the customers.
 12. SELECT salesman.name FROM customer, salesman where customer.salesman_id = salesman.salesman_id;
+
+# From the following tables write a SQL query to list all salespersons along with customer name, city, grade, order number, date, and amount.
+13. SELECT c.cust_name as "customer name", c.city, c.grade, o.ord_no, o.ord_date as "date", o.purch_amt as "amount" FROM salesman s join orders o on s.salesman_id = o.salesman_id join customer c on c.customer_id = o.customer_id;
