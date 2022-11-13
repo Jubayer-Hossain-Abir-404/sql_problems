@@ -22,3 +22,6 @@ NATURAL JOIN salesman;
 
 # Write a SQL query to combine each row of the salesman table with each row of the customer table.
 17. SELECT * FROM salesman cross join customer;
+
+# From the following tables write a SQL query to select all rows from both participating tables as long as there is a match between pro_com and com_id.
+18. SELECT * FROM company_mast join item_mast on company_mast.COM_ID = item_mast.PRO_COM order by com_id;
