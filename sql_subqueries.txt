@@ -15,3 +15,6 @@
 
 # From the following tables write SQL query to find the customers who placed orders on 17th August 2012. Return ord_no, purch_amt, ord_date, customer_id, salesman_id and cust_name.
 10. SELECT b.*, a.cust_name FROM orders b, customer a WHERE a.customer_id=b.customer_id AND b.ord_date='2012-08-17'; 
+
+# From the following tables write a SQL query to find salespeople who had more than one customer. Return salesman_id and name.
+11. SELECT salesman_id,name FROM salesman a WHERE 1 < (SELECT COUNT(*) FROM customer WHERE salesman_id=a.salesman_id);
