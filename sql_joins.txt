@@ -1,1 +1,3 @@
 
+# From the following tables write a SQL query to find the salesperson and customer who reside in the same city. Return Salesman, cust_name and city.
+1. SELECT salesman.name as Salesman, cust_name, salesman.city as city FROM salesman inner join customer on salesman.city = customer.city;
