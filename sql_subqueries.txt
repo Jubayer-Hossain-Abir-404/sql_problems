@@ -21,3 +21,6 @@
 
 # From the following tables write a SQL query to find those orders, which are higher than the average amount of the orders. Return ord_no, purch_amt, ord_date, customer_id and salesman_id. 
 12. SELECT * FROM orders a WHERE purch_amt > (SELECT AVG(purch_amt) FROM orders b WHERE b.customer_id = a.customer_id);
+
+# From the following tables write a SQL query to find those orders that are equal or higher than the average amount of the orders. Return ord_no, purch_amt, ord_date, customer_id and salesman_id.
+13. SELECT * FROM orders a WHERE purch_amt >= (SELECT AVG(purch_amt) FROM orders b WHERE b.customer_id = a.customer_id);
