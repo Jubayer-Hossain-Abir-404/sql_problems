@@ -24,3 +24,6 @@
 
 # From the following tables write a SQL query to find those orders that are equal or higher than the average amount of the orders. Return ord_no, purch_amt, ord_date, customer_id and salesman_id.
 13. SELECT * FROM orders a WHERE purch_amt >= (SELECT AVG(purch_amt) FROM orders b WHERE b.customer_id = a.customer_id);
+
+# Write a query to find the sums of the amounts from the orders table, grouped by date, and eliminate all dates where the sum was not at least 1000.00 above the maximum order amount for that date
+14. SELECT ord_date, SUM(purch_amt) FROM Orders a group by a.ord_date Having SUM(purch_amt) > (SELECT MAX(purch_amt+1000.00) FROM Orders b WHERE a.ord_date = b.ord_date group by b.ord_date);
