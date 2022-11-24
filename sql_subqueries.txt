@@ -30,3 +30,6 @@
 
 # Write a query to extract all data from the customer table if and only if one or more of the customers in the customer table are located in London. 
 15. SELECT * FROM Customer where (SELECT COUNT(customer_id) FROM Customer where city='London') >= 1;
+
+# From the following tables write a SQL query to find salespeople who deal with multiple customers. Return salesman_id, name, city and commission.
+16. Am trying
