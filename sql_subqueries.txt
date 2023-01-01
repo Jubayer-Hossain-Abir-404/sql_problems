@@ -31,5 +31,5 @@
 # Write a query to extract all data from the customer table if and only if one or more of the customers in the customer table are located in London. 
 15. SELECT * FROM Customer where (SELECT COUNT(customer_id) FROM Customer where city='London') >= 1;
 
-# From the following tables write a SQL query to find salespeople who deal with multiple customers. Return salesman_id, name, city and commission.
-16. Am trying 25 .....................
+# From the following tables write a SQL query to find those orders where every order amount is less than the maximum order amount of a customer who lives in London City. Return ord_no, purch_amt, ord_date, customer_id and salesman_id. .
+25.  SELECT o.ord_no, o.purch_amt, o.ord_date, o.customer_id, o.salesman_id FROM Orders o WHERE o.purch_amt < (SELECT max(k.purch_amt) FROM Customer c JOIN Orders k ON k.customer_id = c.customer_id WHERE c.city = 'London');
